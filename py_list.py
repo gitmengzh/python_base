@@ -46,4 +46,20 @@ print(sample_list1[-2:], '利用切片，从倒数第二个元素开始打印到
 print(sample_list1[2::-2],'利用切片，从索引为2的元素开始，逆序到最后，步幅为2')
 
 
+'''
+内置方法
+list.append(元素) # 以列表形式追加元素
+list.clear() # 清空列表
+list.copy() # 拷贝列表（新变量）
+list.count() # 统计元素出现的次数
+list.extend(元素) # 以迭代方式追加元素
+list.index() # 返回元素索引位置
+list.insert(索引) # 指定位置插入元素
+list.pop(索引) #  删除指定位置的元素并返回元素
+list.remove(元素) # 删除指定元素
+list.reverse() # 反转元素
+list.sort() # 排序
+'''
+
+
 

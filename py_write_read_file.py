@@ -43,7 +43,7 @@ def read_txt_file3(path):
 # w mode， 重新写入内容
 def write_txt_file1(path):
     with open(path, 'w') as f4:
-        content4 = f4.write('111') # 返回为写入内容字节数
+        content4 = f4.write('111') # 返回为写入内容字符长度
         print(content4)
 
 # a mode, 追加内容
@@ -87,7 +87,6 @@ def r_plus_mode(path):
         content2 = f.read()
         print('###',content2)
         f.close()
-
 
 
 

@@ -21,10 +21,15 @@ json 语法:
     对象和数组的使用区别
 
 '''
-json1 = [  ]
-json2 = []
-json3 = []
-json4 = []
+json1 = [ {'aaa', 'bbb', 'ccc'},
+          {'111', '222', '333'},
+          {'abc', '123'},
+          ]
+json2 = {'student': [{'name': 'jone', 'age': 20},
+                     {'name': 'hank', 'age': 21},
+                    {'name': 'lily', 'age': 20}]}
+json3 = {'name':'tom', 'age': 18}
+json4 = [{'name':'tom'}]
 
 
 '''

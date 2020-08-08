@@ -1,4 +1,3 @@
-
 '''
 encode()  unicode(python3的str类型) 编码 -> gbk、utf-8(python3的bytes类型)
 decode() 以指定的编码格式解码bytes对象，默认是utf-8,  gbk、utf-8(python3的bytes类型) 解码 ->unicode(python3的str类型)
@@ -18,3 +17,9 @@ b = b'\xe4\xbd\xa0\xe5\xa5\xbd'
 print(b.decode())
 print(a.encode(encoding='gbk'))
 b
+
+# python的encode和decode
+
+a = "你好"
+print(a.encode())
+

@@ -17,4 +17,3 @@ print(a.encode())
 b = b'\xe4\xbd\xa0\xe5\xa5\xbd'
 print(b.decode())
 print(a.encode(encoding='gbk'))
-b

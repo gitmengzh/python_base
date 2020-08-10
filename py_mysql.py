@@ -1,10 +1,12 @@
 #python 连接mysql数据库并操作
+# 多表联合操作
+# https://blog.csdn.net/kongsuhongbaby/article/details/84948205
 
 import pymysql
 
 # 连接数据库
 def py_mysql():
-    dbhost = '58.38.61.182'
+    # dbhost = '58.38.61.182'
 
     dbuser = 'root'
     dbpwd = '!Wangbingxu1'
@@ -30,6 +32,28 @@ def create_table(db):
     # cur.execute(sqlQuery)
     print('create table success')
 
+def py_select(db):
+    cur = db.cursor()
+    sql2= "select * from Student where name='aaas';"
+    cur.execute(sql2)
+
+    # 三个函数返回tuple类型，
+    result1 = cur.fetchone()     # 返回单行数据，如果没有，返回None
+    result2 = cur.fetchmany(2)   # 返回指定行数的数据，如果没有，返回(),类型NoneType
+    result3 = cur.fetchall()     # 返回所有数据，如果没有，返回（），tuple类型
+    return result3
+
+def py_insert(db):
+    cur = db.cursor()
+    # 增加单条数据
+    sql1 = "insert into Student('test1','test1@qq.com', 28)"
+    # 增加多条数据
+    sql2 = ""
+def py_update(db):
+    pass
+
+def py_delete(db):
+    pass
 
 if __name__ == "__main__":
     db = py_mysql()
@@ -41,5 +65,8 @@ if __name__ == "__main__":
     #execurte_sql(db, sql1)
     #db.commit()
     sql2 = "select * from Student where Name='xiaoming'"
-    select_result = execurte_sql(db, sql2)
-    print(select_result)
+    # select_result = execurte_sql(db, sql2)
+
+    # print(select_result)
+    select_result = py_select(db)
+    print(select_result,type(select_result))

@@ -8,7 +8,7 @@ import pymysql
 def py_mysql():
     # dbhost = '58.38.61.182'
 
-    dbhost = '182.61.38.58'
+
     dbuser = 'root'
     dbpwd = '!Wangbingxu1'
     dbname = 'py_test1'

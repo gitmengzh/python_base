@@ -28,7 +28,8 @@ def foo():
 def bar():
     print("i am bar")
 
-bar()
+# bar()
+
 
 
 
@@ -46,4 +47,27 @@ bar()
 #
 #
 # g  = test_yield(5)
-# print(next(g))
+# print(next(g))  22：57
+
+# def fab(max):
+#     n, a, b = 0, 0, 1
+#     list1 = []
+#     while n < max:
+#         list1.append(b)
+#         a, b = b, a + b
+#         n = n + 1
+#     return list1
+def fab(max):
+    n, a, b = 0, 0, 1
+    while n < max:
+        yield b  # 使用 yield
+        # print b
+        a, b = b, a + b
+        n = n + 1
+
+
+
+
+if __name__ == "__main__":
+    for i in fab(5):
+        print(i)
